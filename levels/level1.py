@@ -6,7 +6,7 @@ from entities.exit import Exit
 
 class Level1:
     name = "Laberinto Cuántico - Nivel 1"
-    time_limit = 60  # segundos
+    time_limit = 50  # segundos
 
     def __init__(self):
         self.walls = self._build_walls()
@@ -30,6 +30,8 @@ class Level1:
             W.append(pygame.Rect(6*TILE, i*TILE, TILE, TILE))
         for i in range(8, 18):
             W.append(pygame.Rect(12*TILE, i*TILE - 2*TILE, TILE, TILE))
+        for i in range(1, 10):
+            W.append(pygame.Rect(16*TILE, i*TILE, TILE, TILE))
 
         return W
 

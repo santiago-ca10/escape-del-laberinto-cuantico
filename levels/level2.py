@@ -15,6 +15,7 @@ class Level2:
         self.traps = [
             Trap(TILE*10, TILE*8, TILE//2, TILE//2, move_axis='x', rango=TILE*6, speed=3.0),
             Trap(TILE*5,  TILE*11, TILE//2, TILE//2, move_axis='y', rango=TILE*5, speed=2.5),
+            Trap(TILE*6,  TILE*4, TILE//2, TILE//2, move_axis='y', rango=TILE*4, speed=2.0),
             Trap(TILE*15, TILE*6, TILE//2, TILE//2),
         ]
         self.exit  = Exit(ANCHO - TILE*2, TILE*2, TILE, TILE)
@@ -29,7 +30,7 @@ class Level2:
         W.append(pygame.Rect(ANCHO - TILE, 0, TILE, ALTO))
 
         # Más laberinto
-        for i in range(2, 18):
+        for i in range(2, 17):
             if i != 9:
                 W.append(pygame.Rect(i*TILE, 5*TILE, TILE, TILE))
         for i in range(3, 14):
