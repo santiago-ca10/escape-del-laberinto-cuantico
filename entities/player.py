@@ -2,7 +2,7 @@ import pygame
 from core.settings import AZUL
 
 class Player:
-    def __init__(self, x, y, size=28, speed=4):
+    def __init__(self, x, y, size=15, speed=4):
         self.rect = pygame.Rect(x, y, size, size)
         self.speed = speed
         self.invuln_ms = 0
